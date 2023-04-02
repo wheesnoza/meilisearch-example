@@ -1,0 +1,14 @@
+version: "3.7"
+services:
+  meilisearch:
+    container_name: meilisearch
+    # Testing japanese kanji search prototype
+    image: getmeili/meilisearch:prototype-japanese-1
+    volumes:
+      - meili-data:/data.ms
+    environment: []
+    ports:
+      - 7700:7700
+volumes:
+  meili-data:
+    driver: local
